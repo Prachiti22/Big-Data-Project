@@ -1,0 +1,6 @@
+metric,value
+total_trips,8807158.0
+rule_anomalies,13055.0
+iqr_anomalies,1228430.0
+combined_anomalies,1230252.0
+pct_combined,13.969

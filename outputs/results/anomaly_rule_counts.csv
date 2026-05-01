@@ -1,0 +1,8 @@
+rule,count
+extreme_duration,9271
+impossible_speed,3714
+extreme_distance,114
+extreme_fare,58
+extreme_total,17
+zero_distance_paid,0
+neg_tip,0
