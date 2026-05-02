@@ -235,12 +235,11 @@ with tab_anom:
 
     st.subheader("Sample Flagged Trips")
     if anom_samples is not None and len(anom_samples) > 0:
-        fare_min = float(anom_samples["fare_amount"].min())
-        fare_max = float(anom_samples["fare_amount"].max())
         lo, hi = st.slider(
             "Filter by fare ($)",
-            min_value=fare_min, max_value=fare_max,
-            value=(fare_min, fare_max),
+            min_value=200.0, max_value=1000.0,
+            value=(200.0, 1000.0),
+            step=10.0,
         )
         filt = anom_samples[
             (anom_samples["fare_amount"] >= lo) & (anom_samples["fare_amount"] <= hi)
