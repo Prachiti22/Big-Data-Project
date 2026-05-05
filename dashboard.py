@@ -252,9 +252,18 @@ with tab_anom:
 with st.sidebar:
     st.header("About")
     st.write(
-        "End-to-end PySpark pipeline on NYC TLC Yellow Taxi data "
-        "(Jan–Mar 2023). Covers ingestion, cleaning, descriptive "
-        "analytics, demand forecasting, and anomaly detection."
+        "End-to-end big-data pipeline on NYC TLC Yellow Taxi records "
+        "for Q1 2023 (~10M trips, ~150 MB Parquet)."
+    )
+    st.write(
+        "PySpark ingests the raw Parquet, performs distributed cleaning "
+        "and feature engineering, runs descriptive analyses with Spark SQL, "
+        "trains demand-forecasting regressors with Spark MLlib, and flags "
+        "anomalous trips using both rule-based and IQR statistical detectors."
+    )
+    st.write(
+        "Results are visualized with Matplotlib/Seaborn and surfaced "
+        "in this interactive Streamlit dashboard."
     )
     st.divider()
     st.subheader("Team")
